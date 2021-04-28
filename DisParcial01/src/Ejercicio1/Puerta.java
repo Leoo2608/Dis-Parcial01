@@ -6,7 +6,6 @@ import java.util.logging.Logger;
 
 public class Puerta {
         boolean ocupada;
-
         Puerta(){
                 this.ocupada=false;
 

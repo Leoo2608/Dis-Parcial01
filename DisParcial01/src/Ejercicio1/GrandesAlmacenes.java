@@ -13,13 +13,11 @@ public class GrandesAlmacenes {
 
             for (int i=0; i<NUM_CLIENTES; i++){
                     String nombreHilo   = "Cliente "+i;
-                    cliente[i]          = new Cliente(puerta, almacen,
-                                                                                            nombreHilo);
+                    cliente[i]          = new Cliente(puerta, almacen, nombreHilo);
                     hilosAsociados[i]   = new Thread(cliente[i]);
                     //Intentamos arrancar el hilo
                     hilosAsociados[i].start();
             } //Fin del for
-
             //Una vez arrancados esperamos a que todos terminen
             for (int i=0; i<NUM_CLIENTES; i++){
                     hilosAsociados[i].join();
